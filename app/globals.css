@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 222.2 84% 4.9%; /* Dark Gray */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 222.2 84% 4.9%; /* Dark Gray */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 222.2 84% 4.9%; /* Dark Gray */
+
+    --primary: 100 60% 32%; /* brand-green-dark */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 88 38% 54%; /* brand-green-light */
+    --secondary-foreground: 0 0% 100%; /* White */
+
+    --muted: 210 40% 96.1%; /* Light Gray */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Medium Gray */
+
+    --accent: 210 40% 96.1%; /* Light Gray */
+    --accent-foreground: 222.2 47.4% 11.2%; /* Darker Gray */
+
+    --destructive: 0 84.2% 60.2%; /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+
+    --border: 214.3 31.8% 91.4%; /* Light Border Gray */
+    --input: 214.3 31.8% 91.4%; /* Light Input Border Gray */
+    --ring: 100 60% 32%; /* brand-green-dark for focus ring */
+
+    --radius: 0.5rem;
+
+    /* Custom Brand Colors */
+    --brand-green-dark: 100 60% 32%; /* #4C8C1D */
+    --brand-green-light: 88 38% 54%; /* #96BC78 */
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%; /* Dark Blue-Gray */
+    --foreground: 210 40% 98%; /* Off-White */
+
+    --card: 217.2 32.6% 17.5%; /* Darker Blue-Gray */
+    --card-foreground: 210 40% 98%; /* Off-White */
+
+    --popover: 217.2 32.6% 17.5%; /* Darker Blue-Gray */
+    --popover-foreground: 210 40% 98%; /* Off-White */
+
+    --primary: 100 60% 32%; /* brand-green-dark (can be adjusted for dark mode if needed) */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 88 38% 54%; /* brand-green-light (can be adjusted for dark mode if needed) */
+    --secondary-foreground: 0 0% 100%; /* White */
+
+    --muted: 217.2 32.6% 17.5%; /* Darker Blue-Gray */
+    --muted-foreground: 215 20.2% 65.1%; /* Lighter Gray */
+
+    --accent: 217.2 32.6% 17.5%; /* Darker Blue-Gray */
+    --accent-foreground: 210 40% 98%; /* Off-White */
+
+    --destructive: 0 62.8% 30.6%; /* Darker Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+
+    --border: 217.2 32.6% 17.5%; /* Darker Border Gray */
+    --input: 217.2 32.6% 17.5%; /* Darker Input Border Gray */
+    --ring: 100 60% 32%; /* brand-green-dark for focus ring */
+
+    /* Custom Brand Colors for Dark Mode (adjust if you want different shades) */
+    --brand-green-dark: 100 60% 32%;
+    --brand-green-light: 88 38% 54%;
+  }
+}
+
+/* Custom animation for subtle pulse */
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom font for titles (if you want to embed a specific font, otherwise this is a generic serif) */
+.font-serif {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* New animations for landing page */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
